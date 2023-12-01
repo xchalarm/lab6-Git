@@ -2,26 +2,25 @@
 using namespace std;
 
 int main(){
-    int num;
-    int Even =0;
-    int Odd =0;
+    int contodd=0,conteven=0,num[50];
+    int i=0;
+    while (1)
+    {
+        cout << "Enter an integer: ";
+        cin>>num[i];
+        if(num[i]==0){
+            break;
+        }
+        if(num[i]%2==0){
+            conteven++;
+        } 
+        if(num[i]%2==1){
+            contodd++;
+        }
+        i++;
+    }
     
-    cout << "Enter an integer: ";
-    cin >> num;
-    while (num!=0)
-    {
-     if(num %2==0)
-    {
-    Even++;
-    }
-    else
-    {
-    Odd++;
-    }
-    cout << "Enter an integer: ";
-   cin >> num;    
-    }
-    cout << "#Even numbers = " << Even << endl;
-    cout << "#Odd numbers = " << Odd << endl;
+    cout << "#Even numbers = "<<conteven<<"\n";
+    cout << "#Odd numbers = "<<contodd;
     return 0;
 }
